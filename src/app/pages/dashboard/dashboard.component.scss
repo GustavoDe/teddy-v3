@@ -1,0 +1,118 @@
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  .container-header-body {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xlg, 32px);
+    z-index: 4;
+
+    .metrics-container {
+      flex: 1;
+      display: flex;
+      justify-content: space-around;
+      align-items: stretch;
+      padding: 32px;
+      gap: 32px;
+      border-radius: var(--tds-sys-radius-md, 12px);
+      background: linear-gradient(
+          0deg,
+          var(--tds-sys-color-alpha-background-ghost, rgba(255, 255, 255, 0.06))
+            0%,
+          var(--tds-sys-color-alpha-background-ghost, rgba(255, 255, 255, 0.06))
+            100%
+        ),
+        var(--tds-sys-color-essencial-background-level-base, #080808);
+      z-index: 4;
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+      height: 80px;
+
+      metrics-component {
+        flex: 1;
+      }
+
+      divisor-component {
+        height: 80px;
+      }
+    }
+  }
+
+  .container-medium-body {
+    display: flex;
+    gap: var(--spacing-xlg, 32px);
+    max-height: 299px;
+
+    banner-component {
+      flex: 1;
+    }
+
+    app-card-cs {
+      width: 256px;
+    }
+  }
+
+  .container-bottom-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--tds-sys-spacing-between-inline-card, 16px);
+
+    h2 {
+      color: var(--tds-sys-color-essencial-text-heading, #fff);
+      font-family: "Geologica";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 125%;
+    }
+
+    .container-global-bottom {
+      display: flex;
+      gap: var(--spacing-xlg, 32px);
+
+      .container-cards &:first-child {
+        flex: 1;
+      }
+    }
+
+    .container-cards {
+      display: flex;
+      gap: var(--tds-sys-spacing-between-inline-card, 16px);
+    }
+
+    .cards-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    app-proposal-histories{
+      width: 256px;
+    }
+  }
+}
+
+.card-fake {
+  height: 144px;
+  width: 256px;
+  border-radius: var(--tds-sys-radius-md, 12px);
+  background: var(--tds-sys-color-action-background-primary-base, #eb6625);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+
+  &.vertical{
+    width: 144px;
+    height: 100%;
+  }
+
+  &.lead {
+    background: linear-gradient(
+        0deg,
+        var(--tds-sys-color-alpha-background-ghost, rgba(255, 255, 255, 0.06))
+          0%,
+        var(--tds-sys-color-alpha-background-ghost, rgba(255, 255, 255, 0.06))
+          100%
+      ),
+      var(--tds-sys-color-essencial-background-level-base, #080808);
+  }
+}

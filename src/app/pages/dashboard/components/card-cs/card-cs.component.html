@@ -1,0 +1,47 @@
+<div class="container-card">
+  <avatar-component></avatar-component>
+  <div class="container-body-card">
+    <div class="container-name">
+      <h4>Rafaela Santos</h4>
+      <p>Gerente de Sucesso</p>
+    </div>
+    <div class="container-data-cs">
+      <div class="data-info whats">
+        <my-component
+          [iconName]="'whatsapp'"
+          styleIcon="filled"
+          color="var(--tds-sys-color-action-text-primary-base, #F19467);"
+          size="sm"
+        ></my-component>
+        <span>(11) 95048-5846</span>
+      </div>
+      <div class="data-info">
+        <my-component
+          [iconName]="'call'"
+          [styleIcon]="'filled'"
+          size="sm"
+        ></my-component>
+          <span>(11) 95048-5846</span>
+        <div class="ramal-container">
+          <small class="label">
+            Ramal
+          </small>
+          <div class="ramal-value">
+
+            <span class="ramal">
+              4526
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="data-info">
+        <my-component
+          [iconName]="'email'"
+          [styleIcon]="'filled'"
+          size="sm"
+        ></my-component>
+        <span>Enviar e-mail</span>
+      </div>
+    </div>
+  </div>
+</div>

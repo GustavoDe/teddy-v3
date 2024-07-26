@@ -1,0 +1,84 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md, 16px);
+  padding: 0px 16px 16px 16px;
+  border-radius: var(--radius-lg, 16px);
+  background: var(--tds-sys-color-action-background-neutral-accent, #0f0f0f);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  .fillet {
+    display: flex;
+    height: 7px;
+    padding: var(--spacing-none, 0px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-none, 0px);
+    align-self: stretch;
+    border-radius: var(--radius-none, 0px) var(--radius-none, 0px)
+      var(--radius-pill, 9999px) var(--radius-pill, 9999px);
+    background: var(--tds-sys-color-essencial-background-primary-base, #eb6625);
+  }
+
+  .container-proposals {
+    display: flex;
+    flex-direction: column;
+    gap: var(--tds-sys-spacing-between-stack-card, 12px);
+  }
+
+  .proposal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    height: 61px;
+
+    h2 {
+      overflow: hidden;
+      color: var(--color-content-body-primary, #fff);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-family: "Geologica";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    .status-container {
+      display: flex;
+      align-items: center;
+      gap: 4px var(--tds-sys-spacing-between-inline-minimum, 4px);
+      span {
+        color: var(--tds-sys-color-feedback-text-notice-accent, #fce9b7);
+        font-family: "Geologica";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 170%; /* 20.4px */
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: var(--radius-pill, 9999px);
+        background: var(--tds-sys-color-isolated-background-gold-base, #f6b715);
+      }
+    }
+  }
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  .button {
+    color: var(--tds-sys-color-action-text-primary-base, #ee7d46);
+    text-align: right;
+    font-family: "Geologica";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+}

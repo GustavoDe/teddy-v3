@@ -1,0 +1,115 @@
+.container-card {
+  position: relative;
+  border-radius: var(--radius-lg, 16px);
+  background: var(--tds-sys-color-action-background-neutral-accent, #0f0f0f);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100%;
+
+  avatar-component {
+    position: absolute;
+    top: -24px;
+    left: var(--spacing-lg, 24px);
+  }
+
+  .container-body-card {
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--tds-sys-spacing-between-stack-card, 12px);
+
+    .container-name {
+      margin-top: 28px;
+      h4,
+      p {
+        margin: 0;
+        font-family: "Geologica";
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+
+      h4 {
+        align-self: stretch;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 125%;
+        overflow: hidden;
+        color: var(--tds-sys-color-essencial-text-heading, #fff);
+        text-overflow: ellipsis;
+      }
+      p {
+        overflow: hidden;
+        color: var(--tds-sys-color-essencial-text-caption, #b8b8b8);
+        text-overflow: ellipsis;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+    }
+
+    .container-data-cs {
+      padding: 15px 0px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--tds-sys-spacing-between-stack-container, 24px);
+
+      .data-info {
+        font-family: "Geologica";
+        display: flex;
+        align-items: center;
+        gap: var(--tds-sys-spacing-between-inline-element, 8px);
+        white-space: nowrap;
+        span {
+          color: var(--tds-sys-color-action-text-neutral-base, #fff);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 150%;
+        }
+
+        &.whats {
+          span {
+            color: var(--tds-sys-color-action-text-primary-base, #f19467);
+          }
+        }
+
+        .ramal-container {
+          display: flex;
+          flex-direction: column;
+          .label {
+            font-size: 8px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+            color: var(--tds-sys-color-action-text-neutral-base, #fff);
+          }
+          .ramal-value {
+            display: flex;
+            width: 45px;
+            padding: var(--spacing-none, 0px) var(--spacing-xxsm, 4px);
+            justify-content: center;
+            align-items: center;
+            gap: var(--spacing-xxsm, 4px);
+            border-radius: var(--tds-sys-radius-sm, 8px);
+            background: var(
+              --tds-sys-color-isolated-background-orange-base,
+              #e87d10
+            );
+            .ramal {
+              font-size: var(--tds-ref-font-size-50, 12px);
+              font-style: normal;
+              font-weight: var(--tds-ref-font-weight-medium, 500);
+              line-height: 170%;
+              color: var(--tds-sys-color-essencial-text-static-black, #080808);
+            }
+          }
+        }
+      }
+    }
+  }
+}

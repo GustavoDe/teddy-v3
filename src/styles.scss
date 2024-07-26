@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("assets/fonts/icomoon-fonts/icon-config.css");
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: var(--tds-sys-color-essencial-background-level-base, #080808);
+  height: 100%;
+}

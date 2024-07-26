@@ -1,0 +1,49 @@
+<section>
+  <div class="container-header-body">
+    <div class="card-fake"></div>
+    <div class="metrics-container">
+      <metrics-component
+        [intent]="'negative'"
+        [textContentMetric]="'1.045.030'"
+        [titleIntent]="'Pendências'"
+      ></metrics-component>
+      <divisor-component></divisor-component>
+      <metrics-component
+        [intent]="'positive'"
+        [textContentMetric]="'1.045.030'"
+        [titleIntent]="'Aprovados'"
+      ></metrics-component>
+      <divisor-component></divisor-component>
+
+      <metrics-component
+        [intent]="'informative'"
+        [textContentMetric]="'1.045.030'"
+        [titleIntent]="'Suas Comissões'"
+      ></metrics-component>
+    </div>
+    <div class="card-fake lead"></div>
+  </div>
+
+  <div class="container-medium-body">
+    <banner-component size="huge"></banner-component>
+    <app-card-cs></app-card-cs>
+  </div>
+  <div class="container-bottom-body">
+    <div class="container-global-bottom">
+      <div class="cards-content">
+        <h2>Últimas Notícias</h2>
+        <div class="container-cards">
+          <card-component></card-component>
+          <card-component></card-component>
+          <card-component></card-component>
+
+          <div class="card-fake vertical"></div>
+        </div>
+      </div>
+      <div class="cards-content">
+        <h2>Últimas Notícias</h2>
+        <app-proposal-histories></app-proposal-histories>
+      </div>
+    </div>
+  </div>
+</section>
