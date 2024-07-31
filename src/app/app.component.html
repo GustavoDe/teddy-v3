@@ -1,10 +1,14 @@
 <div class="navigation">
-  <background-component [radius]="false" size="medium"></background-component>
+  <background-component [radius]="true" size="medium"></background-component>
   <side-navigation-component
     iconHighlightButton="calculator"
     textHighlightButton="Nova Proposta"
     [isHighlightButton]="false"
     (alterStateCollapse)="alterCollapse()"
+    (themeSelector)="alterTheme($event)"
+    [ngClass]="collapse && isMobile ? 'hidden-view' : ''"
+    mobile="{{ this.isMobile }}"
+    [collapse]="this.collapse"
   >
     <menu-button-component
       select="true"
@@ -63,7 +67,7 @@
       Simuladores
     </menu-button-component>
   </side-navigation-component>
-  <div class="main-content">
+  <div class="main-content" [class.collapsed]="collapse">
     <div class="container-top-navigation" [class.collapsed]="collapse">
       <top-navigation
         [accountName]="'Gilberto'"
@@ -72,6 +76,10 @@
         [showHighlightButton]="false"
         [roleName]="'Business Banker'"
       ></top-navigation>
+
+      <top-navigation-mobile
+        (openSideNavigationMobile)="openSideNavigationMobile()"
+      ></top-navigation-mobile>
     </div>
     <div class="container-page" [class.collapsed]="collapse">
       <router-outlet></router-outlet>
