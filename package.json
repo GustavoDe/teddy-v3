@@ -10,6 +10,7 @@
   },
   "private": true,
   "dependencies": {
+    "@adobe/leonardo-contrast-colors": "^1.0.0",
     "@angular/animations": "^16.2.0",
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
@@ -18,15 +19,19 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@teddy-solucoes/teddy-ds-tokens": "^1.0.16",
     "rxjs": "~7.8.0",
-    "teddy-design-system": "^0.0.20",
+    "teddy-design-system": "^0.0.51",
+    "teddy-ds-tokens": "^1.0.5",
     "tslib": "^2.3.0",
+    "uninstall": "^0.0.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.14",
     "@angular/cli": "^16.2.14",
     "@angular/compiler-cli": "^16.2.0",
+    "@types/chroma-js": "^2.4.4",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
@@ -34,6 +39,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "raw-loader": "^4.0.2",
     "typescript": "~5.1.3"
   }
 }

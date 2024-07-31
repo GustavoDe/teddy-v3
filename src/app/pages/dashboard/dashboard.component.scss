@@ -3,11 +3,19 @@ section {
   flex-direction: column;
   gap: 32px;
 
+  card-button-component {
+    width: 256px;
+  }
+
   .container-header-body {
     display: flex;
     align-items: center;
     gap: var(--spacing-xlg, 32px);
     z-index: 4;
+
+    .slider-container-metrics {
+      flex: 1;
+    }
 
     .metrics-container {
       flex: 1;
@@ -79,15 +87,27 @@ section {
     .container-cards {
       display: flex;
       gap: var(--tds-sys-spacing-between-inline-card, 16px);
+      transition: transform 0.3s ease;
+    }
+
+    .card-container {
+      display: flex;
+      gap: var(--tds-sys-spacing-between-inline-card, 16px);
     }
 
     .cards-content {
       display: flex;
       flex-direction: column;
       gap: 16px;
+      card-component {
+        width: 100%;
+      }
+      &:nth-child(2) {
+        width: 256px;
+      }
     }
 
-    app-proposal-histories{
+    app-proposal-histories {
       width: 256px;
     }
   }
@@ -100,7 +120,7 @@ section {
   background: var(--tds-sys-color-action-background-primary-base, #eb6625);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
 
-  &.vertical{
+  &.vertical {
     width: 144px;
     height: 100%;
   }
@@ -114,5 +134,136 @@ section {
           100%
       ),
       var(--tds-sys-color-essencial-background-level-base, #080808);
+  }
+}
+
+.filter-sm {
+  display: none;
+}
+
+.slider-container {
+  display: none;
+}
+
+@media screen and (min-width: 360px) and (max-width: 1365.97px) {
+  .container-header-body {
+    flex-direction: column;
+    .slider-container {
+      display: block;
+      width: 100%;
+      cursor: grab;
+      &.active {
+        cursor: grabbing;
+      }
+      .card-button-slider {
+        display: flex;
+        gap: 16px;
+        width: 494px;
+        transition: transform 0.3s ease;
+      }
+
+      .filter-sm {
+        display: block;
+      }
+
+      card-button-component {
+        height: 144px;
+        min-width: 256px;
+      }
+    }
+    .slider-container-metrics {
+      display: block;
+      width: 100%;
+      cursor: grab;
+      &.active {
+        cursor: grabbing;
+      }
+      .metrics-container {
+        display: flex;
+        gap: 16px;
+        width: 624px;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  .container-medium-body {
+    flex-direction: column;
+    banner-component {
+      flex: auto;
+      height: 180px;
+    }
+
+    app-card-cs {
+      width: 100% !important;
+    }
+    max-height: fit-content !important;
+  }
+
+  .container-bottom-body {
+    .container-global-bottom {
+      .container-cards {
+        display: flex;
+        gap: var(--tds-sys-spacing-between-inline-card, 16px);
+        transition: transform 0.3s ease;
+      }
+
+      .card-container {
+        display: flex;
+        gap: var(--tds-sys-spacing-between-inline-card, 16px);
+        min-width: 716px;
+        height: 253.61px;
+        :nth-child(3) {
+          display: none;
+        }
+
+        card-component {
+          flex: 1;
+        }
+
+        card-button-component {
+          width: 96px;
+        }
+      }
+      flex-direction: column;
+
+      app-proposal-histories {
+        width: 100%;
+      }
+    }
+  }
+
+  .filter-md {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 767.98px) {
+ 
+
+  .filter-md-metrics {
+    .metrics-container {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1365.97px) {
+  .slider-container-metrics.filter-md {
+    display: none !important;
+  }
+
+  .cards-content {
+    &:nth-child(2) {
+      width: 100% !important;
+    }
+  }
+
+  .metrics-container {
+    width: 624px;
+  }
+
+  .card-button-slider {
+    width: 736px !important;
   }
 }

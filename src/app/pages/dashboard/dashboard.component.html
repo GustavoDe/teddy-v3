@@ -1,47 +1,103 @@
 <section>
   <div class="container-header-body">
-    <div class="card-fake"></div>
-    <div class="metrics-container">
-      <metrics-component
-        [intent]="'negative'"
-        [textContentMetric]="'1.045.030'"
-        [titleIntent]="'Pendências'"
-      ></metrics-component>
-      <divisor-component></divisor-component>
-      <metrics-component
-        [intent]="'positive'"
-        [textContentMetric]="'1.045.030'"
-        [titleIntent]="'Aprovados'"
-      ></metrics-component>
-      <divisor-component></divisor-component>
+    <card-button-component
+      [titleCardButton]="'Nova Proposta'"
+      [labelCardButton]="'Iniciar'"
+      [iconName]="'dollar-sign-circle'"
+      class="filter-md"
+    ></card-button-component>
 
-      <metrics-component
-        [intent]="'informative'"
-        [textContentMetric]="'1.045.030'"
-        [titleIntent]="'Suas Comissões'"
-      ></metrics-component>
+    <div class="slider-container filter-md-metrics" #slider>
+      <div class="card-button-slider" #cardSlider>
+        <card-button-component
+          [titleCardButton]="'Nova Proposta'"
+          [labelCardButton]="'Iniciar'"
+          [iconName]="'dollar-sign-circle'"
+        ></card-button-component>
+        <card-button-component
+          [titleCardButton]="'Nova Proposta'"
+          [labelCardButton]="'Iniciar'"
+          [iconName]="'filter'"
+          theme="base"
+          class="filter-sm"
+        ></card-button-component>
+        <div class="metrics-container">
+          <metrics-component
+            [intent]="'negative'"
+            [textContentMetric]="'1.045.030'"
+            [titleIntent]="'Pendências'"
+          ></metrics-component>
+          <divisor-component></divisor-component>
+          <metrics-component
+            [intent]="'positive'"
+            [textContentMetric]="'1.045.030'"
+            [titleIntent]="'Aprovados'"
+          ></metrics-component>
+          <divisor-component></divisor-component>
+          <metrics-component
+            [intent]="'informative'"
+            [textContentMetric]="'1.045.030'"
+            [titleIntent]="'Suas Comissões'"
+          ></metrics-component>
+        </div>
+      </div>
     </div>
-    <div class="card-fake lead"></div>
+
+    <div class="slider-container-metrics filter-md" #metricsSlider>
+      <div class="metrics-container" #metricsContainer>
+        <metrics-component
+          [intent]="'negative'"
+          [textContentMetric]="'1.045.030'"
+          [titleIntent]="'Pendências'"
+        ></metrics-component>
+        <divisor-component></divisor-component>
+        <metrics-component
+          [intent]="'positive'"
+          [textContentMetric]="'1.045.030'"
+          [titleIntent]="'Aprovados'"
+        ></metrics-component>
+        <divisor-component></divisor-component>
+        <metrics-component
+          [intent]="'informative'"
+          [textContentMetric]="'1.045.030'"
+          [titleIntent]="'Suas Comissões'"
+        ></metrics-component>
+      </div>
+    </div>
+    <card-button-component
+      [titleCardButton]="'Nova Proposta'"
+      [labelCardButton]="'Iniciar'"
+      [iconName]="'filter'"
+      theme="base"
+      class="filter-md"
+    ></card-button-component>
   </div>
 
   <div class="container-medium-body">
-    <banner-component size="huge"></banner-component>
+    <banner-component [size]="sizeBanner"></banner-component>
     <app-card-cs></app-card-cs>
   </div>
   <div class="container-bottom-body">
     <div class="container-global-bottom">
       <div class="cards-content">
         <h2>Últimas Notícias</h2>
-        <div class="container-cards">
-          <card-component></card-component>
-          <card-component></card-component>
-          <card-component></card-component>
+        <div class="container-cards" #cardsSlider>
+          <div class="card-container" #cardContainer>
+            <card-component></card-component>
+            <card-component></card-component>
+            <card-component></card-component>
 
-          <div class="card-fake vertical"></div>
+            <card-button-component
+              [titleCardButton]="'Notícias'"
+              [labelCardButton]="'Ver todas'"
+              [iconName]="'document'"
+              direction="vertical"
+            ></card-button-component>
+          </div>
         </div>
       </div>
       <div class="cards-content">
-        <h2>Últimas Notícias</h2>
+        <h2>Últimas propostas</h2>
         <app-proposal-histories></app-proposal-histories>
       </div>
     </div>
