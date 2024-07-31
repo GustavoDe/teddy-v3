@@ -31,7 +31,6 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/@teddy-solucoes/teddy-ds-tokens/styles/base/dark.scss"
             ],
             "scripts": []
           },
