@@ -1,7 +1,7 @@
 {
     "build": {
       "env": {
-        "NPM_TOKEN": "@npm-token"
+        "NPM_TOKEN": "NPM_TOKEN"
       }
     }
   }
